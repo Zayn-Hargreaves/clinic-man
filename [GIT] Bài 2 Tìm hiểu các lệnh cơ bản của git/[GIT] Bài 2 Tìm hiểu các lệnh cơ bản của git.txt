@@ -1,0 +1,77 @@
+cac cau lenh co ban cua git 
+1. git version - kiem tra phien ban cua git
+- git --v
+2. git config - cau hinh cac bien chung
+- git config --g user.name "name"
+- git config --g user.email "email"
+- git config --list
+3. git help -- lay tat ca cac lenh cua git
+- git help -a 
+- git config --help : dan toi trang chinh cua git
+- git command -help : xem tat ca cac tuy chon san cho lenh cu the
+4. git mkdir
+- git mkdir folder-name: tao repository trong local he thong
+5. git remote
+- git remote add origin http... <url>- lien ket den remote repository (local & github)
+- git remote set-url <name> <new-url> - thay doi dia chi cua remote repository
+- git remote rename <old> <new> - thay doi ten cua remote repository lien ket
+6. git init 
+- git init: khoi tao git o dau du an
+7. git status 
+- git status
+- git status --short: kiem tra trang thai kho luu tru
+8. git add 
+- git add . : add nhung thay doi de thuc hien commit
+- git add index.js : add file cuj the de thuc hien commit
+9. git commit
+- git commit -m " thong diep": ghi cac thay doi vao repo
+    - dat ten branch hay thong diep theo cac quy dinh cua cong tuy
+10. git diff
+- git diff : so sanh su khac biet voi lan cuoi commit
+- git log: xem log cua git
+11. git push
+- git push -u origin branch_name: push branch vao remote repository
+- git push : day cac thay doi len repository
+- git push -d origin branch_name : xoa 1 nhanh tren remote repository
+- git push -f origin branch_name : buoc thay doi voi nhanh hien tai, co the gay conflict voi nguoi khac
+12. git branch 
+- git branch -M branch_name(main): doi ten nhanh chinh
+- git branch: kiem tra cac nhanh hien co o local
+- git branch -c branch_name / git checkout -b branch_name : tao 1 nhanh moi va chuyen luon sang nhanh do
+- git branch -d branch_name : xoa 1 nhanh tren local da duoc hop nhat vao remote repository
+- git branch -D branch_name : xoa 1 nhanh tai local co ten: "branch_name" (branch da commit nhung chua hop nhat vao remote repository)
+- git branch -a : kiem tra tat cac cac nhanh tren remote repo
+13. git checkout
+- git checkout -b branch_name: tao va chuyen sang luon nhanh moi
+- git checkout branch_name: chuyen sang nhanh moi
+14. git fetch( lay code ve nhung chua muon merge)
+- git fetch origin: lay trang thai thay doi tren github nhung khong thay doi noi dung cua local repo
+15. git merge: (merge ket hop nhanh hien tai voi 1 nhanh duoc chi dinh)
+- b1: di chuyen ve branch can hop nhat bang lenh checkout
+    - git checkout branch_name1 ( nhanh nhan hop nhat hoac nhanh hien tai)
+- b2 : tien hanh merge
+    - git merge branch_name2 ( nhanh chi dinh hop nhat)
+16. git pull (hop nhat tu xa)
+- git pull origin main : git pull keo tat ca thay doi tu main ve local
+- git pull : git pull keo tat ca nhung thay doi cua nhanh hien tai ve local
+- git pull origin: keo tat ca nhung thay doi tu repo vao branch hien tai ( pull = fetch + merge)
+- git rebase : pull chong conflict
+17. git clone:
+- git clone <url> - clone du an co san tren github
+- git clone <url> folder_name - clone va doi ten du an khi save vao local
+18. git stash:
+- git stash save # hoac git stash - luu lai cong viec dang lam o 1 branch va chuyen sang 1 branch khac ( khi chua muon commit code)
+- git stash list : xem lai lich su thay doi
+- git stash show stash@{n}  : xem lai lich su thay doi cua lan stash save{n}
+- git stash apply stash@{1} : apply thay doi cua lan stash save{n}
+- git stash clear : xoa toan bo stash
+19. git rebase ( hop nhat code)
+- di chuyen toi nhanh nhan su hop nhat
+    - git checkout branch_name1
+- tien hanh hop nhat
+    - git rebase branch_name2 ( code tu branch_name2 se duoc hop nhat vao branch_name1)
+20. git revert 
+- git revert <commit_id> - lenh nay tao su thay doi nguoc lai voi commit_id duoc chon
+- git reset -hard <commit_id> - xoa toan bo lenh truoc do dua branch ve trang thai cua commit_id duoc chon
+- git reset -sort <commit_id> - dua branch ve trang thai cua commit_id duoc chon. Giu nguyen tat ca thay doi cua file va cac thay doi o stage   
+
